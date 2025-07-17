@@ -1,0 +1,26 @@
+<!-- Exemplo 1: Consulta Pessoa Física -->
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" 
+               xmlns:tns="http://tempuri.org/">
+  <soap:Header/>
+  <soap:Body>
+    <tns:cnsCliente>
+      <tns:Cgc_Cpf_Cliente>12345678901</tns:Cgc_Cpf_Cliente>
+      <tns:Tipo>1</tns:Tipo>
+      <tns:Pessoa>F</tns:Pessoa>
+      <tns:Tipo_Grupo>CONSORCIO</tns:Tipo_Grupo>
+    </tns:cnsCliente>
+  </soap:Body>
+</soap:Envelope>
+
+<!-- Exemplo 2: Consulta Pessoa Jurídica -->
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" 
+               xmlns:tns="http://tempuri.org/">
+  <soap:Header/>
+  <soap:Body>
+    <tns:cnsCliente>
+      <tns:Cgc_Cpf_Cliente>12345678000190</tns:Cgc_Cpf_Cliente>
+      <tns:Tipo>1</tns:Tipo>
+      <tns:Pessoa>J</tns:Pessoa>
+    </tns:cnsCliente>
+  </soap:Body>
+</soap:Envelope>

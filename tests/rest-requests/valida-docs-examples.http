@@ -1,0 +1,32 @@
+### Login
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "cod_usuario": 1,
+  "password": "suaSenha"
+}
+
+### Validação de Documentos (com consulta SPC/Serpro)
+POST http://localhost:3000/valida_docs
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "cpf_cnpj": "12345678901",
+  "consulta_opc_SN": "S"
+}
+
+### Validação de Documentos (sem consulta)
+POST http://localhost:3000/valida_docs
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "cpf_cnpj": "12345678901",
+  "consulta_opc_SN": "N"
+}
+
+### Histórico de Consultas
+GET http://localhost:3000/historicoConsultaCliente?cpf_cnpj=12345678901&ultimaConsultaSN=S
+Authorization: Bearer {{token}}
